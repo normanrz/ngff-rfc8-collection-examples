@@ -21,7 +21,7 @@
                 "name": "sub-collection",
                 "path": {
                     "type": "json",
-                    "path": "./nested-collection.json"
+                    "path": "./child_collection.json"
                 },
                 "attributes": {
                     "ex:a": 1,
