@@ -17,16 +17,15 @@
             },
             {
                 "id": "5e6979ce-915f-480e-bc4a-695713402968",
-                "type": "multiscale",
-                "name": "image-label",
+                "type": "collection",
+                "name": "sub-collection",
                 "path": {
-                    "type": "zarr",
-                    "path": "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.5/idr0062A/6001240_labels.zarr/labels/0/"
+                    "type": "json",
+                    "path": "./nested-collection.json"
                 },
                 "attributes": {
-                    "ngio:source": {
-                        "ref": "e4f1e2ee-a52f-46b5-ae1a-543e689cecad"
-                    }
+                    "ex:a": 1,
+                    "ex:b": 2
                 }
             }
         ]
