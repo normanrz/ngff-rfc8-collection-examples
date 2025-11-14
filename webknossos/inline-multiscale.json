@@ -4,12 +4,14 @@
   "attributes": {
     "ome": {
       "version": "1.0dev891342",
-      "type": "collection",
       "id": "af92b1d8-1b02-46d5-884c-de92b215edb0",
+      "type": "collection",
       "name": "l4dense_motta_et_al_dev_v2",
       "attributes": {
         "webknossos:rendering": {
-          "coordinate_system": "fa8a2d0a-0f4a-4c95-bf5b-a9528433653e",
+          "coordinate_system": {
+            "$ref": "fa8a2d0a-0f4a-4c95-bf5b-a9528433653e"
+          },
           "position": {
             "x": 2850,
             "y": 4318,
@@ -47,8 +49,8 @@
       },
       "nodes": [
         {
-          "type": "multiscale",
           "id": "65d8484b-3792-4eb8-9d4e-e9fbee3a5458",
+          "type": "multiscale",
           "name": "color",
           "attributes": {
             "webknossos:category": "color",
@@ -68,10 +70,10 @@
           },
           "nodes": [
             {
+              "id": "4ec0b506-ad9f-404f-b106-9e66246b00e1",
               "type": "singlescale",
               "name": "1",
-              "id": "4ec0b506-ad9f-404f-b106-9e66246b00e1",
-              "ref": {
+              "path": {
                 "type": "zarr",
                 "path": "/absolute/path/to/l4dense_motta_et_al_demo/color/1"
               },
@@ -98,10 +100,10 @@
               }
             },
             {
-              "type": "singlescale",
               "id": "1a612389-20f5-4af1-b125-8bed8a5d7e85",
+              "type": "singlescale",
               "name": "2-2-1",
-              "ref": {
+              "path": {
                 "type": "zarr",
                 "path": "/absolute/path/to/l4dense_motta_et_al_demo/color/2-2-1"
               },
@@ -130,8 +132,8 @@
           ]
         },
         {
-          "type": "multiscale",
           "id": "3967cf03-0ca0-49f0-a0c6-27f105724ab7",
+          "type": "multiscale",
           "name": "segmentation",
           "attributes": {
             "webknossos:category": "segmentation",
@@ -154,10 +156,10 @@
           },
           "nodes": [
             {
-              "type": "singlescale",
               "id": "00b522ce-9e08-4838-936e-8302cb0f43c1",
+              "type": "singlescale",
               "name": "1",
-              "ref": {
+              "path": {
                 "type": "zarr",
                 "path": "./segmentation/1"
               },
@@ -184,10 +186,10 @@
               }
             },
             {
-              "type": "singlescale",
               "id": "92d5c223-cc30-4e4c-92ed-629e41acc139",
+              "type": "singlescale",
               "name": "2-2-1",
-              "ref": {
+              "path": {
                 "type": "zarr",
                 "path": "./segmentation/2-2-1"
               },
@@ -214,10 +216,10 @@
               }
             },
             {
-              "type": "singlescale",
               "id": "194888b2-656d-4d8c-81db-0d38ac2eecd6",
+              "type": "singlescale",
               "name": "4-4-2",
-              "ref": {
+              "path": {
                 "type": "zarr",
                 "path": "./segmentation/4-4-2"
               },
@@ -248,7 +250,7 @@
         {
           "type": "webknossos:mesh",
           "name": "meshfile_4-4-2",
-          "ref": {
+          "path": {
             "type": "zarr",
             "path": "./segmentation/zarr/meshes/meshfile_4-4-2"
           },
@@ -262,7 +264,7 @@
         {
           "type": "webknossos:agglomeration",
           "name": "agglomerate_view_5",
-          "ref": {
+          "path": {
             "type": "zarr",
             "path": "./segmentation/zarr/agglomerates/agglomerate_view_5"
           },
@@ -276,7 +278,7 @@
         {
           "type": "webknossos:segment_index",
           "name": "segmentIndex",
-          "ref": {
+          "path": {
             "type": "zarr",
             "path": "./segmentation/zarr/segmentIndex/segmentIndex"
           },
@@ -290,7 +292,7 @@
         {
           "type": "webknossos:connectome",
           "name": "paper_l4_full_connectome",
-          "ref": {
+          "path": {
             "type": "zarr",
             "path": "./segmentation/zarr/connectomes/paper_l4_full_connectome"
           },
@@ -302,8 +304,8 @@
           }
         },
         {
-          "type": "multiscale",
           "id": "294cdc31-8362-4d67-be14-57a74d2bc2fa",
+          "type": "multiscale",
           "name": "prediction",
           "attributes": {
             "webknossos:category": "color",
@@ -328,10 +330,10 @@
           },
           "nodes": [
             {
-              "type": "singlescale",
               "id": "556d7d8d-ca99-44b6-be1b-62fbcf1eba5e",
+              "type": "singlescale",
               "name": "1",
-              "ref": {
+              "path": {
                 "type": "zarr",
                 "path": "./prediction/1"
               },
@@ -358,10 +360,10 @@
               }
             },
             {
-              "type": "singlescale",
               "id": "6550f3d2-5d65-4668-82c1-e2fb16370449",
+              "type": "singlescale",
               "name": "2-2-1",
-              "ref": {
+              "path": {
                 "type": "zarr",
                 "path": "./prediction/2-2-1"
               },
