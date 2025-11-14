@@ -15,7 +15,10 @@
                 },
                 "attributes": {
                     "ngio:source": {
-                        "ref": "e4f1e2ee-a52f-46b5-ae1a-543e689cecad"
+                        "ref": {
+                            "path": { "type": "json", "path": "./parent_collection.json" },
+                            "id": "e4f1e2ee-a52f-46b5-ae1a-543e689cecad"
+                        }
                     }
                 }
             }
