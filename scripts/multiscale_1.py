@@ -1,21 +1,23 @@
-from ngff_rfc8_collection_examples.single_scales import SingleScale
-from ngff_rfc8_collection_examples.common import (
-    CoordinateSystem,
-    Scale,
-    random_id,
-    BaseAttrs,
-)
+import pathlib
+
+import numpy as np
 import zarr
+from pydantic import BaseModel
+
+from ngff_rfc8_collection_examples.common import (
+    Axes,
+    BaseAttrs,
+    CoordinateSystem,
+    PathRefZarr,
+    Ref,
+    Scale,
+)
 from ngff_rfc8_collection_examples.multiscale import (
     MultiscaleWithVersion,
     RootMultiscale,
 )
-import pathlib
-from ngff_rfc8_collection_examples.common import Axes, Ref, PathRef, PathRefZarr
 from ngff_rfc8_collection_examples.pydantic_tools import collect_models
-from pydantic import BaseModel
-import numpy as np
-
+from ngff_rfc8_collection_examples.single_scales import SingleScale
 
 np.random.seed(0)
 def pseudo_uuid():

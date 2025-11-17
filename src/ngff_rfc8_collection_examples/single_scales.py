@@ -1,14 +1,15 @@
-from pydantic import BaseModel, Field
 from typing import Literal
 
 import zarr
+from pydantic import BaseModel, Field
+
 from ngff_rfc8_collection_examples.common import (
-    CoordinateSystem,
-    Scale,
-    NodeModel,
-    random_id,
-    PathRef,
     BaseAttrs,
+    CoordinateSystem,
+    NodeModel,
+    PathRef,
+    Scale,
+    random_id,
 )
 
 
@@ -42,6 +43,7 @@ class RootSingleScale(BaseModel):
 
 if __name__ == "__main__":
     from pathlib import Path
+
     from ngff_rfc8_collection_examples.common import Axes, Ref
 
     world_cs = CoordinateSystem(

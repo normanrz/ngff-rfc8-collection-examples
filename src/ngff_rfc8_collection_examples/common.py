@@ -1,23 +1,20 @@
+import json
+import uuid
+from pathlib import Path
+from typing import Generic, Literal, TypeVar
+
+import urllib3.util
+import zarr
 from pydantic import (
+    AliasChoices,
     BaseModel,
     Field,
     PrivateAttr,
     model_serializer,
-    AliasChoices,
     model_validator,
 )
-import uuid
-from typing import Literal
-from pathlib import Path
-import zarr
-from typing import TypeVar
+
 from ngff_rfc8_collection_examples.pydantic_tools import collect_ids
-import json
-import urllib3.util
-from urllib3.util import Url
-
-
-from typing import Generic
 
 url = urllib3.util.parse_url("https://example.com")
 

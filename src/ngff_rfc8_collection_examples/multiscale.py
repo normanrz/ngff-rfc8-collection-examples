@@ -1,13 +1,15 @@
-from pydantic import BaseModel, Field
+from pathlib import Path
 from typing import Literal
-from ngff_rfc8_collection_examples.single_scales import SingleScale, RootSingleScale
+
+import zarr
+from pydantic import BaseModel, Field
+
 from ngff_rfc8_collection_examples.common import (
     BaseAttrs,
-    random_id,
     NodeModel,
+    random_id,
 )
-import zarr
-from pathlib import Path
+from ngff_rfc8_collection_examples.single_scales import SingleScale
 
 
 class Multiscale(NodeModel[Literal["multiscale"], BaseAttrs, SingleScale]):

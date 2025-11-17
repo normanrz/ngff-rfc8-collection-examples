@@ -1,13 +1,15 @@
-from pydantic import BaseModel, Field
+from pathlib import Path
 from typing import Literal
-from ngff_rfc8_collection_examples.single_scales import SingleScale
-from ngff_rfc8_collection_examples.multiscale import Multiscale
+
+import zarr
+from pydantic import BaseModel, Field
+
 from ngff_rfc8_collection_examples.common import (
     BaseAttrs,
     NodeModel,
 )
-import zarr
-from pathlib import Path
+from ngff_rfc8_collection_examples.multiscale import Multiscale
+from ngff_rfc8_collection_examples.single_scales import SingleScale
 
 
 class Collection(
