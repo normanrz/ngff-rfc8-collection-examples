@@ -1,0 +1,89 @@
+{
+  "shape": [
+    64,
+    64,
+    64
+  ],
+  "data_type": "uint8",
+  "chunk_grid": {
+    "name": "regular",
+    "configuration": {
+      "chunk_shape": [
+        32,
+        64,
+        64
+      ]
+    }
+  },
+  "chunk_key_encoding": {
+    "name": "default",
+    "configuration": {
+      "separator": "/"
+    }
+  },
+  "fill_value": 0,
+  "codecs": [
+    {
+      "name": "bytes"
+    },
+    {
+      "name": "zstd",
+      "configuration": {
+        "level": 0,
+        "checksum": false
+      }
+    }
+  ],
+  "attributes": {
+    "ome": {
+      "id": "3dfce102",
+      "type": "singlescale",
+      "name": "scale 0",
+      "attributes": {
+        "coordinateSystems": [
+          {
+            "id": "69fad5d1",
+            "name": "world",
+            "axes": [
+              {
+                "name": "z",
+                "type": "space",
+                "unit": "micrometer"
+              },
+              {
+                "name": "y",
+                "type": "space",
+                "unit": "micrometer"
+              },
+              {
+                "name": "x",
+                "type": "space",
+                "unit": "micrometer"
+              }
+            ]
+          }
+        ],
+        "coordinateTransformations": [
+          {
+            "type": "scale",
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "input": {
+              "ref": "3dfce102"
+            },
+            "output": {
+              "ref": "69fad5d1"
+            }
+          }
+        ]
+      },
+      "version": "0.7dev0"
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "array",
+  "storage_transformers": []
+}

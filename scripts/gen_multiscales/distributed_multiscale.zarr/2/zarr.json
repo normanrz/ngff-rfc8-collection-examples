@@ -1,0 +1,89 @@
+{
+  "shape": [
+    16,
+    16,
+    16
+  ],
+  "data_type": "uint8",
+  "chunk_grid": {
+    "name": "regular",
+    "configuration": {
+      "chunk_shape": [
+        16,
+        16,
+        16
+      ]
+    }
+  },
+  "chunk_key_encoding": {
+    "name": "default",
+    "configuration": {
+      "separator": "/"
+    }
+  },
+  "fill_value": 0,
+  "codecs": [
+    {
+      "name": "bytes"
+    },
+    {
+      "name": "zstd",
+      "configuration": {
+        "level": 0,
+        "checksum": false
+      }
+    }
+  ],
+  "attributes": {
+    "ome": {
+      "id": "2bf3723e",
+      "type": "singlescale",
+      "name": "scale 2",
+      "attributes": {
+        "coordinateSystems": [
+          {
+            "id": "69fad5d1",
+            "name": "world",
+            "axes": [
+              {
+                "name": "z",
+                "type": "space",
+                "unit": "micrometer"
+              },
+              {
+                "name": "y",
+                "type": "space",
+                "unit": "micrometer"
+              },
+              {
+                "name": "x",
+                "type": "space",
+                "unit": "micrometer"
+              }
+            ]
+          }
+        ],
+        "coordinateTransformations": [
+          {
+            "type": "scale",
+            "scale": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "input": {
+              "ref": "2bf3723e"
+            },
+            "output": {
+              "ref": "69fad5d1"
+            }
+          }
+        ]
+      },
+      "version": "0.7dev0"
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "array",
+  "storage_transformers": []
+}

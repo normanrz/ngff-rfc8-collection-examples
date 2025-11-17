@@ -1,8 +1,8 @@
 [project]
 authors = [{ name = "rfc8 authors", email = "lorenzo.cerrone@uzh.ch" }]
-dependencies = ["zarr", "pydantic", "notebook"]
+dependencies = ["zarr", "pydantic", "notebook", "ruff"]
 name = "ngff-rfc8-collection-examples"
-requires-python = ">= 3.11"
+requires-python = ">= 3.11, <3.14"
 version = "0.1.0"
 
 [build-system]
@@ -17,3 +17,15 @@ platforms = ["osx-arm64"]
 ngff_rfc8_collection_examples = { path = ".", editable = true }
 
 [tool.pixi.tasks]
+clean_gen = "rm -rf scripts/gen_single_scale scripts/gen_multiscales scripts/gen_collections"
+single-scale-ex1 = "python scripts/single_scale_1.py"
+multiscale-ex1 = "python scripts/multiscale_1.py "
+multiscale-ex2 = "python scripts/multiscale_2.py"
+collection-ex1 = "python scripts/collections_1.py"
+gen_all = [
+    { task = "clean_gen" },
+    { task = "single-scale-ex1" },
+    { task = "multiscale-ex1" },
+    { task = "multiscale-ex2" },
+    { task = "collection-ex1" },
+]

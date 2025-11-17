@@ -1,0 +1,33 @@
+{
+  "attributes": {
+    "ome": {
+      "id": "02eb9e34",
+      "type": "collection",
+      "name": "basic collection",
+      "nodes": [
+        {
+          "id": "dadf899a",
+          "type": "multiscale",
+          "name": "test multiscale 1",
+          "path": {
+            "type": "zarr",
+            "path": "./multiscale_1"
+          }
+        },
+        {
+          "id": "16caaeff",
+          "type": "multiscale",
+          "name": "test multiscale 2",
+          "path": {
+            "type": "zarr",
+            "path": "./multiscale_2"
+          }
+        }
+      ],
+      "version": "0.7dev0"
+    }
+  },
+  "zarr_format": 3,
+  "consolidated_metadata": null,
+  "node_type": "group"
+}

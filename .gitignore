@@ -1,3 +1,8 @@
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+# Notebooks
+.ipynb_checkpoints
+*.ipynb
+# Python cache
+__pycache__/
