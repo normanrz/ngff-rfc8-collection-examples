@@ -36,7 +36,7 @@
           "name": "scale 0",
           "path": {
             "type": "zarr",
-            "path": "0"
+            "path": "./0"
           },
           "attributes": {
             "coordinateTransformations": [
@@ -63,7 +63,7 @@
           "name": "scale 1",
           "path": {
             "type": "zarr",
-            "path": "1"
+            "path": "./1"
           },
           "attributes": {
             "coordinateTransformations": [
@@ -90,7 +90,7 @@
           "name": "scale 2",
           "path": {
             "type": "zarr",
-            "path": "2"
+            "path": "./2"
           },
           "attributes": {
             "coordinateTransformations": [

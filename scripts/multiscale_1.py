@@ -47,7 +47,7 @@ for i in range(3):
     scale = SingleScale(
         id=id,
         name=f"scale {i}",
-        path=PathRefZarr(path=str(array_path.relative_to(group_path))),
+        path=PathRefZarr(path="./" + str(array_path.relative_to(group_path))),
         attributes=BaseAttrs(
             coordinate_transformations=[
                 Scale(
