@@ -19,7 +19,7 @@ class Collection(
 
 
 class CollectionWithVersion(Collection):
-    version: Literal["0.8"] = "0.8"
+    version: Literal["0.7dev0"] = "0.7dev0"
 
 
 class RootCollection(BaseModel):

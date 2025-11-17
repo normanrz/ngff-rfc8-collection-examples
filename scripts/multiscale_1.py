@@ -14,12 +14,21 @@ import pathlib
 from ngff_rfc8_collection_examples.common import Axes, Ref, PathRef, PathRefZarr
 from ngff_rfc8_collection_examples.pydantic_tools import collect_models
 from pydantic import BaseModel
+import numpy as np
+
+
+np.random.seed(0)
+def pseudo_uuid():
+    return "".join(np.random.choice(list("abcdef0123456789"), size=8))
 
 group_path = (
-    pathlib.Path(__file__).parent / "gen_multiscales" / "consolidated_multiscale.zarr"
+    pathlib.Path(__file__).parent
+    / "gen_multiscales"
+    / "consolidated_multiscale.zarr"
 )
 
 world_cs = CoordinateSystem(
+    id=pseudo_uuid(),
     name="world",
     axes=[
         Axes(name="z", type="space", unit="micrometer"),
@@ -30,7 +39,7 @@ world_cs = CoordinateSystem(
 
 scales = []
 for i in range(3):
-    id = random_id()
+    id = pseudo_uuid()
     array_path = group_path / f"{i}"
     assert world_cs.id is not None
     scale = SingleScale(
@@ -55,7 +64,8 @@ for i in range(3):
     )
     scales.append(scale)
 ms = MultiscaleWithVersion(
-    version="0.8",
+    id=pseudo_uuid(),
+    version="0.7dev0",
     name="test multiscale",
     attributes=BaseAttrs(coordinate_systems=[world_cs]),
     nodes=scales,
@@ -63,8 +73,6 @@ ms = MultiscaleWithVersion(
 ome_ms = RootMultiscale(ome=ms)
 ome_ms.to_zarr(zarr.open_group(group_path, mode="a"))
 
-print(dict(zarr.open_group(group_path, mode="r").attrs))
-exit()
 loaded_ms = RootMultiscale.from_zarr(zarr.open_group(group_path, mode="r"))
 
 

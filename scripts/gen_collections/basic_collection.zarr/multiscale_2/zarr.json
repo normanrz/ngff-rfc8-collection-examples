@@ -1,13 +1,13 @@
 {
   "attributes": {
     "ome": {
-      "id": "36652b0b-41c4-40df-aeb0-741d88fc349c",
+      "id": "16caaeff",
       "type": "multiscale",
       "name": "test multiscale 2",
       "attributes": {
-        "coordinate_systems": [
+        "coordinateSystems": [
           {
-            "id": "199babd6-ab98-449b-aa87-a1f2351adf8e",
+            "id": "69fad5d1",
             "name": "world",
             "axes": [
               {
@@ -31,15 +31,15 @@
       },
       "nodes": [
         {
-          "id": "d10daebd-947f-4f39-ad9a-3e7797b3e6f2",
+          "id": "cd2bd7dd",
           "type": "singlescale",
           "name": "scale 0",
           "path": {
             "type": "zarr",
-            "path": "0"
+            "path": "./0"
           },
           "attributes": {
-            "coordinate_transformations": [
+            "coordinateTransformations": [
               {
                 "type": "scale",
                 "scale": [
@@ -48,25 +48,25 @@
                   1.0
                 ],
                 "input": {
-                  "ref": "d10daebd-947f-4f39-ad9a-3e7797b3e6f2"
+                  "ref": "cd2bd7dd"
                 },
                 "output": {
-                  "ref": "199babd6-ab98-449b-aa87-a1f2351adf8e"
+                  "ref": "69fad5d1"
                 }
               }
             ]
           }
         },
         {
-          "id": "78463096-c238-49be-860a-c9fe0ce06f80",
+          "id": "81ab339a",
           "type": "singlescale",
           "name": "scale 1",
           "path": {
             "type": "zarr",
-            "path": "1"
+            "path": "./1"
           },
           "attributes": {
-            "coordinate_transformations": [
+            "coordinateTransformations": [
               {
                 "type": "scale",
                 "scale": [
@@ -75,25 +75,25 @@
                   2.0
                 ],
                 "input": {
-                  "ref": "78463096-c238-49be-860a-c9fe0ce06f80"
+                  "ref": "81ab339a"
                 },
                 "output": {
-                  "ref": "199babd6-ab98-449b-aa87-a1f2351adf8e"
+                  "ref": "69fad5d1"
                 }
               }
             ]
           }
         },
         {
-          "id": "6d00c029-9c26-40de-9924-d81b95615764",
+          "id": "94e1d85c",
           "type": "singlescale",
           "name": "scale 2",
           "path": {
             "type": "zarr",
-            "path": "2"
+            "path": "./2"
           },
           "attributes": {
-            "coordinate_transformations": [
+            "coordinateTransformations": [
               {
                 "type": "scale",
                 "scale": [
@@ -102,17 +102,17 @@
                   4.0
                 ],
                 "input": {
-                  "ref": "6d00c029-9c26-40de-9924-d81b95615764"
+                  "ref": "94e1d85c"
                 },
                 "output": {
-                  "ref": "199babd6-ab98-449b-aa87-a1f2351adf8e"
+                  "ref": "69fad5d1"
                 }
               }
             ]
           }
         }
       ],
-      "version": "0.8"
+      "version": "0.7dev0"
     }
   },
   "zarr_format": 3,

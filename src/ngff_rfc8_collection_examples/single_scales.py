@@ -22,7 +22,7 @@ class SingleScale(NodeModel[Literal["singlescale"], BaseAttrs, None]):
 
 
 class SingleScaleWithVersion(SingleScale):
-    version: Literal["0.8"] = "0.8"
+    version: Literal["0.7dev0"] = "0.7dev0"
 
 
 class RootSingleScale(BaseModel):
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     id = random_id()
     sc = SingleScaleWithVersion(
         id=id,
-        version="0.8",
+        version="0.7dev0",
         name=f"scale {0}",
         attributes=BaseAttrs(
             coordinate_systems=[world_cs],

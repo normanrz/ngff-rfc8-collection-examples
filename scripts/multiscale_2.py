@@ -19,11 +19,19 @@ from ngff_rfc8_collection_examples.common import Axes, Ref, PathRef, PathRefZarr
 from ngff_rfc8_collection_examples.pydantic_tools import collect_models
 from pydantic import BaseModel
 
+import numpy as np
+
+
+np.random.seed(0)
+def pseudo_uuid():
+    return "".join(np.random.choice(list("abcdef0123456789"), size=8))
+
 group_path = (
     pathlib.Path(__file__).parent / "gen_multiscales" / "distributed_multiscale.zarr"
 )
 
 world_cs = CoordinateSystem(
+    id=pseudo_uuid(),
     name="world",
     axes=[
         Axes(name="z", type="space", unit="micrometer"),
@@ -34,11 +42,11 @@ world_cs = CoordinateSystem(
 
 scales = []
 for i in range(3):
-    id = random_id()
+    id = pseudo_uuid()
     array_path = group_path / f"{i}"
     assert world_cs.id is not None
     singl_scale = SingleScaleWithVersion(
-        version="0.8",
+        version="0.7dev0",
         id=id,
         name=f"scale {i}",
         path=None,
@@ -56,7 +64,7 @@ for i in range(3):
     single_scale_in_ms = SingleScale(
         id=singl_scale.id,
         name=singl_scale.name,
-        path=PathRefZarr(path=str(array_path.relative_to(group_path))),
+        path=PathRefZarr(path="./" + str(array_path.relative_to(group_path))),
     )
     array = zarr.create_array(
         store=array_path,
@@ -68,7 +76,8 @@ for i in range(3):
     root_sc.to_zarr(array)
     scales.append(single_scale_in_ms)
 ms = MultiscaleWithVersion(
-    version="0.8",
+    id=pseudo_uuid(),
+    version="0.7dev0",
     name="test multiscale",
     attributes=BaseAttrs(coordinate_systems=[]),
     nodes=scales,

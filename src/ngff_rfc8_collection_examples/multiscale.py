@@ -19,7 +19,7 @@ class Multiscale(NodeModel[Literal["multiscale"], BaseAttrs, SingleScale]):
 
 
 class MultiscaleWithVersion(Multiscale):
-    version: Literal["0.8"] = "0.8"
+    version: Literal["0.7dev0"] = "0.7dev0"
 
 
 class RootMultiscale(BaseModel):
@@ -31,10 +31,11 @@ class RootMultiscale(BaseModel):
         # Resolve the all path references in the multiscale
         for scale in model.ome.nodes:
             if scale.path is not None:
+                # Merge the node attributes from zarr array
                 array = scale.path.resolve_path()
                 assert isinstance(array, zarr.Array)
-                scale_in_zarr = RootSingleScale.from_zarr(array)
-                new_attributes = scale_in_zarr.ome.attributes.model_dump()
+                scale_in_zarr = SingleScale.model_validate(array.attrs, context=array)
+                new_attributes = scale_in_zarr.attributes.model_dump()
                 new_attributes.update(scale.attributes.model_dump())
                 scale.attributes = BaseAttrs.model_validate(new_attributes)
         return model

@@ -1,39 +1,39 @@
 {
   "attributes": {
     "ome": {
-      "id": "d947404d-af92-47cb-936b-f189b8c69af5",
+      "id": "dadf899a",
       "type": "multiscale",
       "name": "test multiscale",
       "nodes": [
         {
-          "id": "98422cdb-d561-4413-91ed-0fd4079d037b",
+          "id": "3dfce102",
           "type": "singlescale",
           "name": "scale 0",
           "path": {
             "type": "zarr",
-            "path": "0"
+            "path": "./0"
           }
         },
         {
-          "id": "86e7471d-724f-4426-a0ac-1b9731606ca5",
+          "id": "264b0118",
           "type": "singlescale",
           "name": "scale 1",
           "path": {
             "type": "zarr",
-            "path": "1"
+            "path": "./1"
           }
         },
         {
-          "id": "5c7bfdb0-aa11-4696-b4b9-f03cd9800381",
+          "id": "2bf3723e",
           "type": "singlescale",
           "name": "scale 2",
           "path": {
             "type": "zarr",
-            "path": "2"
+            "path": "./2"
           }
         }
       ],
-      "version": "0.8"
+      "version": "0.7dev0"
     }
   },
   "zarr_format": 3,

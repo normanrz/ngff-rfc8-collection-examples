@@ -1,13 +1,13 @@
 {
   "attributes": {
     "ome": {
-      "id": "ffa71b89-f855-49a0-b231-1bfb1265603d",
+      "id": "dadf899a",
       "type": "multiscale",
       "name": "test multiscale",
       "attributes": {
-        "coordinate_systems": [
+        "coordinateSystems": [
           {
-            "id": "d1f3ecbd-6457-4cd2-bbad-74f78040fed6",
+            "id": "69fad5d1",
             "name": "world",
             "axes": [
               {
@@ -31,7 +31,7 @@
       },
       "nodes": [
         {
-          "id": "87dd6cc2-a440-47c1-832b-913521277fd9",
+          "id": "3dfce102",
           "type": "singlescale",
           "name": "scale 0",
           "path": {
@@ -39,7 +39,7 @@
             "path": "0"
           },
           "attributes": {
-            "coordinate_transformations": [
+            "coordinateTransformations": [
               {
                 "type": "scale",
                 "scale": [
@@ -48,17 +48,17 @@
                   1.0
                 ],
                 "input": {
-                  "ref": "87dd6cc2-a440-47c1-832b-913521277fd9"
+                  "ref": "3dfce102"
                 },
                 "output": {
-                  "ref": "d1f3ecbd-6457-4cd2-bbad-74f78040fed6"
+                  "ref": "69fad5d1"
                 }
               }
             ]
           }
         },
         {
-          "id": "171921b3-c56c-4888-b84b-0d0482c099e3",
+          "id": "264b0118",
           "type": "singlescale",
           "name": "scale 1",
           "path": {
@@ -66,7 +66,7 @@
             "path": "1"
           },
           "attributes": {
-            "coordinate_transformations": [
+            "coordinateTransformations": [
               {
                 "type": "scale",
                 "scale": [
@@ -75,17 +75,17 @@
                   2.0
                 ],
                 "input": {
-                  "ref": "171921b3-c56c-4888-b84b-0d0482c099e3"
+                  "ref": "264b0118"
                 },
                 "output": {
-                  "ref": "d1f3ecbd-6457-4cd2-bbad-74f78040fed6"
+                  "ref": "69fad5d1"
                 }
               }
             ]
           }
         },
         {
-          "id": "0bbf08da-95f2-4f96-bba6-94a324ece47f",
+          "id": "2bf3723e",
           "type": "singlescale",
           "name": "scale 2",
           "path": {
@@ -93,7 +93,7 @@
             "path": "2"
           },
           "attributes": {
-            "coordinate_transformations": [
+            "coordinateTransformations": [
               {
                 "type": "scale",
                 "scale": [
@@ -102,17 +102,17 @@
                   4.0
                 ],
                 "input": {
-                  "ref": "0bbf08da-95f2-4f96-bba6-94a324ece47f"
+                  "ref": "2bf3723e"
                 },
                 "output": {
-                  "ref": "d1f3ecbd-6457-4cd2-bbad-74f78040fed6"
+                  "ref": "69fad5d1"
                 }
               }
             ]
           }
         }
       ],
-      "version": "0.8"
+      "version": "0.7dev0"
     }
   },
   "zarr_format": 3,

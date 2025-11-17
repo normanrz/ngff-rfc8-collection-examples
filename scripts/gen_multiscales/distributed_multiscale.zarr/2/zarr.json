@@ -36,13 +36,13 @@
   ],
   "attributes": {
     "ome": {
-      "id": "5c7bfdb0-aa11-4696-b4b9-f03cd9800381",
+      "id": "2bf3723e",
       "type": "singlescale",
       "name": "scale 2",
       "attributes": {
-        "coordinate_systems": [
+        "coordinateSystems": [
           {
-            "id": "c8858dbc-0f98-4aa9-b5e0-70095785a9fc",
+            "id": "69fad5d1",
             "name": "world",
             "axes": [
               {
@@ -63,7 +63,7 @@
             ]
           }
         ],
-        "coordinate_transformations": [
+        "coordinateTransformations": [
           {
             "type": "scale",
             "scale": [
@@ -72,15 +72,15 @@
               4.0
             ],
             "input": {
-              "ref": "5c7bfdb0-aa11-4696-b4b9-f03cd9800381"
+              "ref": "2bf3723e"
             },
             "output": {
-              "ref": "c8858dbc-0f98-4aa9-b5e0-70095785a9fc"
+              "ref": "69fad5d1"
             }
           }
         ]
       },
-      "version": "0.8"
+      "version": "0.7dev0"
     }
   },
   "zarr_format": 3,

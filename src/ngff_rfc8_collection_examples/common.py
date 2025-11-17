@@ -37,6 +37,11 @@ def resolve_zarr_path(
         return group
     elif not isinstance(context, zarr.Group):
         raise TypeError("Context must be a zarr.Group or None.")
+    
+    # Remove leading './' if present
+    path = path.lstrip("./")
+    if path.startswith("../"):
+        raise ValueError("Not supported yet")
     group = context.get(path, None)
     if group is None:
         raise ValueError(f"Path '{path}' not found in the given Zarr group context.")
@@ -215,4 +220,10 @@ class BaseAttrs(BaseModel):
             data.pop("coordinate_systems", None)
         if len(data.get("coordinate_transformations", [])) == 0:
             data.pop("coordinate_transformations", None)
+            
+        # Rename aliases back to camelCase
+        if "coordinate_systems" in data:
+            data["coordinateSystems"] = data.pop("coordinate_systems")
+        if "coordinate_transformations" in data:
+            data["coordinateTransformations"] = data.pop("coordinate_transformations")
         return data
