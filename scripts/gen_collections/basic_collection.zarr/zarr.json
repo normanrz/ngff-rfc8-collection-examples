@@ -1,0 +1,33 @@
+{
+  "attributes": {
+    "ome": {
+      "id": "782b80ba-ac62-432d-a5a2-c41c87d03002",
+      "type": "collection",
+      "name": "basic collection",
+      "nodes": [
+        {
+          "id": "ac9486c1-f275-4501-bc5f-253439282c79",
+          "type": "multiscale",
+          "name": "test multiscale 1",
+          "path": {
+            "type": "zarr",
+            "path": "./multiscale_1"
+          }
+        },
+        {
+          "id": "36652b0b-41c4-40df-aeb0-741d88fc349c",
+          "type": "multiscale",
+          "name": "test multiscale 2",
+          "path": {
+            "type": "zarr",
+            "path": "./multiscale_2"
+          }
+        }
+      ],
+      "version": "0.8"
+    }
+  },
+  "zarr_format": 3,
+  "consolidated_metadata": null,
+  "node_type": "group"
+}
